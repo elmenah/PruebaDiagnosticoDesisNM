@@ -1,0 +1,131 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente general para todo el cuerpo */
+    background-color: #f0f2f5; /* Color de fondo gris claro */
+    display: flex; /* Usar flexbox para centrar el formulario */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Ocupar al menos el 100% del alto de la ventana */
+    margin: 0; /* Eliminar el margen por defecto del body */
+    padding: 20px; /* Añadir un poco de padding para evitar que el formulario toque los bordes en pantallas muy pequeñas */
+    box-sizing: border-box; /* Incluir el padding y el borde en el tamaño total del elemento */
+}
+
+/* Estilos del contenedor principal del formulario */
+.form-container {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 30px 40px; /* Espaciado interno del formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    width: 100%; /* Ocupar el 100% del ancho disponible */
+    max-width: 650px; /* Ancho máximo del formulario, ajustado para que coincida con la imagen */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+}
+
+/* Estilos del título del formulario */
+h1 {
+    text-align: center; /* Centrar el texto del título */
+    color: #333333; /* Color de texto oscuro */
+    margin-bottom: 30px; /* Margen inferior para separar del primer campo */
+    font-size: 26px; /* Tamaño de fuente ligeramente más grande para el título */
+    font-weight: bold; /* Título en negrita */
+}
+
+/* Estilos para el formulario en sí */
+#form-producto {
+    display: flex; /* Usar flexbox para organizar los elementos */
+    flex-direction: column; /* Apilar los elementos del formulario verticalmente */
+}
+
+/* Estilos para cada fila de campos (ej. Código y Nombre, Bodega y Sucursal) */
+.form-row {
+    display: flex; /* Usar flexbox para colocar los elementos en una fila */
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    margin-bottom: 20px; /* Margen inferior para separar las filas */
+    gap: 30px; /* Espacio entre las columnas de cada fila, ajustado para la imagen */
+}
+
+/* Estilos para las etiquetas (labels) de los campos */
+.form-row label {
+    flex: 1; /* Cada label ocupará el mismo espacio disponible en la fila */
+    display: flex; /* Usar flexbox para la label y su input */
+    flex-direction: column; /* Apilar la etiqueta encima del input */
+    color: #555555; /* Color del texto de la etiqueta */
+    font-size: 14px; /* Tamaño de fuente de la etiqueta */
+    font-weight: bold; /* Las etiquetas están en negrita en la imagen */
+}
+
+/* Estilos para los campos de texto, select y textarea */
+.form-row input[type="text"],
+.form-row select,
+.form-row textarea {
+    width: 100%; /* Ocupar el 100% del ancho de su contenedor (la etiqueta) */
+    padding: 10px 12px; /* Espaciado interno del campo */
+    margin-top: 8px; /* Margen superior para separar del texto de la etiqueta */
+    border: 1px solid #cccccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho/alto total */
+    font-size: 14px; /* Tamaño de fuente del texto dentro del campo */
+    color: #333333; /* Color del texto dentro del campo */
+    outline: none; /* Eliminar el contorno por defecto al enfocar */
+}
+
+/* Estilos al enfocar los campos */
+.form-row input[type="text"]:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: #007bff; /* Cambiar color del borde al enfocar */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Añadir una sombra suave al enfocar */
+}
+
+
+/* Estilos para el campo de texto de descripción */
+.form-row textarea {
+    resize: vertical; /* Permitir redimensionar solo verticalmente */
+    min-height: 90px; /* Altura mínima para el textarea */
+}
+
+/* Estilos específicos para la fila de materiales (checkboxes) */
+.materiales {
+    flex-direction: column; /* Apilar la etiqueta "Material del Producto:" y los checkboxes */
+    margin-bottom: 25px; /* Más espacio para esta sección */
+}
+
+/* Contenedor de los checkboxes */
+.materiales .checkboxes {
+    display: flex; /* Usar flexbox para los checkboxes */
+    flex-wrap: wrap; /* Permitir que los checkboxes salten de línea si no caben */
+    gap: 25px; /* Espacio entre cada elemento de checkbox */
+    margin-top: 8px; /* Margen superior para separar de la etiqueta "Material del Producto:" */
+}
+
+/* Estilos para las etiquetas de cada checkbox */
+.materiales .checkboxes label {
+    flex-direction: row; /* Colocar el checkbox y su texto en la misma fila */
+    align-items: center; /* Alinear verticalmente el checkbox y el texto */
+    font-weight: normal; /* El texto del checkbox no está en negrita */
+    font-size: 14px; /* Tamaño de fuente del texto del checkbox */
+    cursor: pointer; /* Indicar que la etiqueta es clickeable */
+}
+
+
+/* Estilos del botón de envío */
+button[type="submit"] {
+    display: block; /* Hacer que el botón ocupe su propia línea y se pueda centrar */
+    width: 180px; /* Ancho específico del botón, como en la imagen */
+    padding: 12px 20px; /* Espaciado interno del botón */
+    background-color: #1aab8a; /* Color de fondo verde (como en la imagen) */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente del texto del botón */
+    font-weight: bold; /* Texto del botón en negrita */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    margin: 30px auto 0 auto; /* Centrar el botón horizontalmente y añadir margen superior */
+    transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el ratón por encima del botón */
+button[type="submit"]:hover {
+    background-color: #218838; /* Color verde más oscuro al pasar el ratón */
+}

@@ -1,0 +1,44 @@
+# Proyecto: Registro de Productos - Prueba Diagnóstico DESIS
+
+## Autor:
+Nombre: Nicolás Mena
+Correo: menanicolas161@gmail.com
+
+## Versión del Entorno:
+- PHP: 8.0.30
+- Base de Datos: PostgreSQL 17 (instalado localmente)
+
+## Estructura del Proyecto:
+- `index.html` → Interfaz del formulario con validaciones y conexión AJAX
+- `style.css` → Estilos nativos
+- `script.js` → Carga dinámica de datos, validaciones, envío vía fetch
+- `guardar.php` → Guarda productos con validación, conexión PDO y manejo de arrays PostgreSQL
+- `api/cargar-selects.php` → Mini API que devuelve JSON para llenar los `<select>`
+- `sql/estructura.sql` → Script SQL para crear tablas y cargar datos iniciales para pruebas
+- `LEEME.txt` → Este archivo
+
+## Requisitos para ejecutar el proyecto:
+1. Tener **XAMPP** y **PostgreSQL 17** instalados
+2. Crear base de datos local llamada `registro_productos`
+3. Ejecutar el archivo `sql/estructura.sql` desde pgAdmin para crear tablas y cargar datos
+4. Colocar el proyecto dentro de `C:/xampp/htdocs/Prueba-Desis/`
+5. Iniciar Apache desde el panel de XAMPP
+6. Acceder desde el navegador a:
+  
+   http://localhost/Prueba-Desis/
+   
+
+## Configuración técnica:
+- Las conexiones a PostgreSQL se realizan vía PDO
+- El campo `materiales` se guarda como un **array PostgreSQL** en formato:
+  
+  {"Plástico","Metal"}
+  
+- Se utilizan *consultas preparadas* para evitar inyecciones SQL
+- La validación del formulario se realiza en `script.js`
+
+## Funcionalidades principales:
+- Validación completa del formulario
+- Selects dinámicos para bodega, sucursal y moneda
+- Inserción de productos con código único
+- Alertas de éxito o errores detallados
