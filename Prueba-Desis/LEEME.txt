@@ -37,6 +37,16 @@ Correo: menanicolas161@gmail.com
 - Se utilizan *consultas preparadas* para evitar inyecciones SQL
 - La validación del formulario se realiza en `script.js`
 
+## 🛠️ Datos de conexión
+Asegúrarse de que los archivos `guardar.php`, `cargar-selects.php` y cualquier otro que use conexión a la base de datos, contengan los datos correctos de acceso a PostgreSQL. Por ejemplo:
+
+```php
+$pdo = new PDO("pgsql:host=localhost;port=5432;dbname=registro_productos", "postgres", "CONTRASEÑA");
+```
+
+🔁 Reemplazar `"CONTRASEÑA"` por la contraseña que se configuró al instalar PostgreSQL.  
+🔐 Si usas un usuario distinto a `postgres`, también debes modificarlo.
+
 ## Funcionalidades principales:
 - Validación completa del formulario
 - Selects dinámicos para bodega, sucursal y moneda
